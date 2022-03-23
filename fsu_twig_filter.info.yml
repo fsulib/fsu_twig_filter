@@ -1,0 +1,6 @@
+name: FSU Twig Filter
+type: module
+description: This will make image_style function available in Twig file
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Migration

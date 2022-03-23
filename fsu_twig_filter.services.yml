@@ -1,0 +1,20 @@
+services:
+  fsu_twig_filter.twig_extension:
+    arguments: ['@renderer']
+    class: Drupal\fsu_twig_filter\Twig\ImageStyles
+    tags:
+      - { name: twig.extension }
+  fsu_twig_filter.twig.render_region:
+    class: Drupal\fsu_twig_filter\Twig\RenderRegion
+    tags:
+      - { name: twig.extension }
+
+  fsu_twig_filter.twig.module_exist:
+    class: Drupal\fsu_twig_filter\Twig\ModuleExist
+    tags:
+      - { name: twig.extension }
+
+
+  plugin.manager.core.layout:
+    class: Drupal\Core\Layout\LayoutPluginManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler', '@theme_handler']
