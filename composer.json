@@ -1,0 +1,15 @@
+{
+  "name": "fsulib/fsu_twig_filter",
+  "description": "A module that provides additional functionality for the FSU_Strata theme.",
+  "type": "drupal-custom-module",
+  "keywords": ["Drupal"],
+  "homepage": "https://github.com/fsulib/fsu_twig_filter",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Favenzio Calvo",
+      "email": "fcalvo@fsu.edu",
+      "role": "Maintainer"
+    }
+  ]
+}
