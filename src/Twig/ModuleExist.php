@@ -10,7 +10,7 @@ namespace Drupal\fsu_twig_filter\Twig;
 /**
  * Adds extension to render a menu
  */
-class ModuleExist extends \Twig_Extension {
+class ModuleExist extends \Twig\Extension\AbstractExtension {
 
   /**
    * {@inheritdoc}
@@ -21,7 +21,7 @@ class ModuleExist extends \Twig_Extension {
 
   public function getFunctions() {
     return [
-      new \Twig_SimpleFunction(
+      new \Twig\TwigFunction(
         'module_exist',
           [$this, 'module_exist'],
           ['is_safe' => ['html']]
