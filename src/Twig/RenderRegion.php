@@ -10,7 +10,7 @@ namespace Drupal\fsu_twig_filter\Twig;
 /**
  * Adds extension to render a menu
  */
-class RenderRegion extends \Twig_Extension
+class RenderRegion extends \Twig\Extension\AbstractExtension
 {
 
     /**
@@ -24,7 +24,7 @@ class RenderRegion extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction(
+            new \Twig\TwigFunction(
                 'render_fsu_region',
                 [$this, 'render_fsu_region'],
                 ['is_safe' => ['html']]
