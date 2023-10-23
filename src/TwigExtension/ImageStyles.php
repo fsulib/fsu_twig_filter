@@ -13,14 +13,14 @@ use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 
-class ImageStyles extends \Twig_Extension {
+class ImageStyles extends \Twig\Extension\AbstractExtension {
  
     /**
      * Generates a list of all Twig functions that this extension defines.
      */
      public function getFunctions(){
          return array(
-             new \Twig_SimpleFunction('image_style', array($this, 'imageStyle'), array('is_safe' => array('html'))),
+             new \Twig\TwigFunction('image_style', array($this, 'imageStyle'), array('is_safe' => array('html'))),
          );
      }
 
